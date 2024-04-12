@@ -14,7 +14,7 @@ function Article(props) {
         onClick={handleClick}
         className="py-1 px-6 bg-teal-600 text-slate-200 rounded-md cursor-pointer hover:bg-teal-500 transition-all duration-100"
       >
-        Click
+        Detail
       </button>
     </div>
   );

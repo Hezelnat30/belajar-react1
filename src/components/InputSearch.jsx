@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function InputSearch() {
+function InputSearch(props) {
   const [search, setSearch] = useState("");
+
   const changeSearch = (e) => {
     setSearch(e.target.value);
+    props.onSearch(e.target.value);
   };
 
   return (
