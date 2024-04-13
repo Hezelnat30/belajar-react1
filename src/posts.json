@@ -1,17 +1,38 @@
 [
   {
-    "title": "Belajar ReactJS",
-    "tags": ["react", "frontend"],
-    "date": "2024-04-12"
+    "title": "Tutorial Belajar ReactJS",
+    "tags": ["react", "framework"],
+    "date": "2024-04-12",
+    "isNew": true
   },
   {
     "title": "Meningkatkan performa ReactJS",
     "tags": ["react", "frontend"],
-    "date": "2024-04-13"
+    "date": "2024-04-13",
+    "isNew": true
   },
   {
     "title": "Hooks ReactJS",
-    "tags": ["react", "css"],
-    "date": "2024-04-14"
+    "tags": ["react", "hooks"],
+    "date": "2024-04-14",
+    "isNew": false
+  },
+  {
+    "title": "Belajar Tailwindcss",
+    "tags": ["tailwind", "css"],
+    "date": "2024-03-14",
+    "isNew": false
+  },
+  {
+    "title": "Belajar Framework Bootstrap",
+    "tags": ["bootstrap", "css"],
+    "date": "2024-03-10",
+    "isNew": false
+  },
+  {
+    "title": "Belajar Mengembangkan Website",
+    "tags": ["website", "framework"],
+    "date": "2024-03-14",
+    "isNew": true
   }
 ]

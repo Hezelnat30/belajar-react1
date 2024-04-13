@@ -1,9 +1,9 @@
 import "./index.css";
-import Homepage from "./pages/Index.jsx";
+import Homepage from "./pages/index";
 
 function App() {
   return (
-    <div className="app min-h-screen bg-gray-800">
+    <div>
       <Homepage />
     </div>
   );

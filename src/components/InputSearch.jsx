@@ -10,7 +10,7 @@ function InputSearch(props) {
   };
 
   return (
-    <div className="p-2 flex gap-3 items-center justify-center">
+    <div className="p-2 flex max-w-md mx-auto flex-wrap gap-3 items-center justify-center">
       <label htmlFor="search" className="text-white text-lg">
         Cari Artikel :
       </label>
@@ -19,8 +19,8 @@ function InputSearch(props) {
         type="text"
         className="px-2 py-1 rounded bg-slate-100 outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600"
       />
-      <small className="text-white">
-        Ditemukan data dengan kata pencarian {search}
+      <small className="text-white text-base">
+        Ditemukan {props.totalPosts} data dengan kata pencarian {search}
       </small>
     </div>
   );

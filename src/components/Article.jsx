@@ -6,9 +6,9 @@ function Article(props) {
   return (
     <div className="p-4 my-2 text-white flex flex-col items-start gap-2">
       <div>
-        <h1 className="font-medium">Tutorial {props.title}</h1>
+        <h1 className="font-medium">{props.title}</h1>
         <p>Date : {props.date}</p>
-        <p>Tags: {props.tags.join(", ")} </p>
+        <p>Tags : {props.tags.join(", ")} </p>
       </div>
       <button
         onClick={handleClick}
