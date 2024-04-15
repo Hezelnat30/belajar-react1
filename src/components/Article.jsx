@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { GlobalContext } from "../context";
+
 function Article(props) {
   const handleClick = () => {
     alert("Button diklik!");
   };
+
+  const user = useContext(GlobalContext);
 
   return (
     <div className="p-4 my-2 text-white flex flex-col items-start gap-2">
@@ -9,6 +14,9 @@ function Article(props) {
         <h1 className="font-medium">{props.title}</h1>
         <p>Date : {props.date}</p>
         <p>Tags : {props.tags.join(", ")} </p>
+        <small className="bg-yellow-600 p-1">
+          Ditulis Oleh : {user.username}
+        </small>
       </div>
       <button
         onClick={handleClick}
