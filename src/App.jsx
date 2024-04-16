@@ -1,6 +1,6 @@
 import "./index.css";
-import Homepage from "./pages/index";
 import { GlobalContext } from "./context";
+import { RouterComponent } from "./routers";
 
 function App() {
   const user = {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <GlobalContext.Provider value={user}>
-        <Homepage />
+        <RouterComponent />
       </GlobalContext.Provider>
     </div>
   );
