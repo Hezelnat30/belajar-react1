@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "../pages/index";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Homepage from "../pages/Index";
 import About from "../pages/about";
 
 export const RouterComponent = () => {

@@ -1,5 +1,6 @@
-import "./index.css";
 import { GlobalContext } from "./context";
+import "./index.css";
+import Navbar from "./layouts/RootLayout";
 import { RouterComponent } from "./routers";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <GlobalContext.Provider value={user}>
+        <Navbar />
         <RouterComponent />
       </GlobalContext.Provider>
     </div>
