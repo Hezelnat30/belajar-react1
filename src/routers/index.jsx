@@ -1,14 +1,21 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
+import Navbar from "../layouts/RootLayout";
 import Homepage from "../pages/Index";
 import About from "../pages/about";
 
-export const RouterComponent = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
-  );
-};
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+]);

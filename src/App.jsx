@@ -1,7 +1,7 @@
+import { RouterProvider } from "react-router-dom";
 import { GlobalContext } from "./context";
 import "./index.css";
-import Navbar from "./layouts/RootLayout";
-import { RouterComponent } from "./routers";
+import { router } from "./routers/index";
 
 function App() {
   const user = {
@@ -10,8 +10,7 @@ function App() {
   return (
     <div className="App">
       <GlobalContext.Provider value={user}>
-        <Navbar />
-        <RouterComponent />
+        <RouterProvider router={router} />
       </GlobalContext.Provider>
     </div>
   );
