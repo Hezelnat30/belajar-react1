@@ -15,6 +15,11 @@ const Navbar = () => {
               Tentang
             </Link>
           </li>
+          <li>
+            <Link to="/blog" className="text-white hover:text-gray-200">
+              Blog
+            </Link>
+          </li>
         </ul>
       </nav>
       <Outlet />

@@ -1,18 +1,11 @@
+import { useState, useEffect } from "react";
 import postsData from "../posts.json";
 import Article from "../components/Article";
 import InputSearch from "../components/InputSearch";
-import { useState, useEffect } from "react";
 
 export default function Homepage() {
   const [posts, setPosts] = useState(postsData);
   const [totalPosts, setTotalPosts] = useState(0);
-  const [externalPost, setExternalPost] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
-      res.json().then((data) => setExternalPost(data))
-    );
-  }, []);
 
   const onSearchChange = (value) => {
     const filterData = postsData.filter((data) => data.title.includes(value));
@@ -49,13 +42,6 @@ export default function Homepage() {
       {posts.map((props, index) => {
         return <Article {...props} key={index} />;
       })}
-      <hr />
-      <div className="external-post p-4 bg-orange-200">
-        <h2 className="text-3xl font-semibold">External Post</h2>
-        {externalPost.slice(0, 20).map((item, index) => (
-          <div key={index}> -{item.title} </div>
-        ))}
-      </div>
     </div>
   );
 }
