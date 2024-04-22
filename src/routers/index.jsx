@@ -4,12 +4,14 @@ import Homepage from "../pages/index";
 import About from "../pages/about";
 import Blog from "../pages/blogs/index";
 import ExternalPost from "../pages/blogs/_id";
+import ErrorPage from "../components/ErrorPage";
 import { posts, postById } from "../apis/loaders";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
