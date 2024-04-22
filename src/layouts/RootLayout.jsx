@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import "../styles/style.css";
 
 const Navbar = () => {
   return (
@@ -6,19 +7,28 @@ const Navbar = () => {
       <nav className="bg-blue-500 py-3">
         <ul className="flex justify-center space-x-4">
           <li>
-            <Link to="/" className="text-white hover:text-gray-200">
+            <NavLink
+              to="/"
+              className="text-white relative p-1 hover:text-gray-200"
+            >
               Beranda
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="text-white hover:text-gray-200">
+            <NavLink
+              to="/about"
+              className="text-white relative p-1 hover:text-gray-200"
+            >
               Tentang
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/blog" className="text-white hover:text-gray-200">
+            <NavLink
+              to="/blog"
+              className="text-white relative p-1 hover:text-gray-200"
+            >
               Blog
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
