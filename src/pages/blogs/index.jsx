@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+
 function Blog() {
-  const [externalPost, setExternalPost] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
-      res.json().then((data) => setExternalPost(data))
-    );
-  }, []);
+  const externalPost = useLoaderData();
   return (
     <div className="external-post p-4 bg-orange-200">
       <h2 className="text-3xl font-semibold">My Blog Post</h2>

@@ -1,16 +1,7 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 function detailPost() {
-  const params = useParams();
-  const [post, setPost] = useState("");
-
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`).then(
-      (res) => res.json().then((data) => setPost(data))
-    );
-  }, []);
-
+  const post = useLoaderData();
   return (
     <div>
       <div className="bg-indigo-800 flex justify-center items-center flex-col px-10 py-6">
