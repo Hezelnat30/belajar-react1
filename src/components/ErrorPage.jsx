@@ -1,7 +1,12 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError, useNavigate } from "react-router-dom";
 
 export default function ErrorPage() {
+  const navigate = useNavigate();
   const error = useRouteError();
+
+  const navigateError = () => {
+    navigate("/");
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -13,7 +18,10 @@ export default function ErrorPage() {
           <p className="text-gray-600 mb-6">
             Maaf, sepertinya ada masalah saat memuat halaman.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button
+            onClick={navigateError}
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
             Kembali ke Beranda
           </button>
         </div>
